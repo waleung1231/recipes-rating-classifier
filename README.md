@@ -96,4 +96,9 @@ The test statistic we chose is the different in precision score across recipes t
 And the significant level we chose for our data is 0.05. And the resulting p-value that we got for our data is 0.253. Thus, this indicated that we fail to reject the null hypothesis, and that our data is fair. In addition, any observed differences could be due to random variation rather than a systematic difference in how well the model performs for individuals with and without preheat. All in all, we can conclude that under the case of precision parity our model performs similarly across the two groups. 
 
 ## Precision Difference Plot
-<iframe width="800" height="500" src="precision_difference_plot.html"></iframe>
+<iframe
+  src="precision_difference_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
