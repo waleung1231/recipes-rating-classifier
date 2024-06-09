@@ -84,3 +84,15 @@ Using these hyperparameters, we created a RandomForestClassifier. On training da
 While we did use a RandomForestClassifier to avoid overfitting, it is posssible that it overfit to the training/test set. However, that cannot be tested without using more data. 
 
 ### Fairness Analysis
+For our fairness analysis we chose whether or not the recipe require baking as our evaluation metric group. Whether or not a recipe require preheat indicates if this recipe requires baking. The evalutation matrix we chose is the Precision Parity, this is because our data would not be valid for accuracy parity since our predicting column (rating) is an imbalanced dataset, where we have significantly more 5 star ratings. Therefore, using accuracy parity might not lead to fair outcomes. 
+
+Our Null and Alternative Hypothesis:
+
+Null Hypothesis: Our model is fair. There is no difference in precision between recipe that require pre-heat and recipe that do not require preheat. And any observed difference is due to random chance. 
+Alternative Hypothesis: Our model is not fair.There is a significant difference between the precision between recipe that require pre-heat and recipe that do not require preheat. And any observed difference is not due to chance. 
+
+The test statistic we chose is the different in precision score across recipes that requires pre-heat and those that do not require pre-heat.
+And the significant level we chose for our data is 0.05. And the resulting p-value that we got for our data is 0.253. Thus, this indicated that we fail to reject the null hypothesis, and that our data is fair. In addition, any observed differences could be due to random variation rather than a systematic difference in how well the model performs for individuals with and without preheat. All in all, we can conclude that under the case of precision parity our model performs similarly across the two groups. 
+
+## Precision Difference Plot
+<iframe width="800" height="500" src="precision_difference_plot.html"></iframe>
