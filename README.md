@@ -1,6 +1,3 @@
-### Recipes Ratings RandomForestClassifier
-A collaboration between Wan-Rong (Emma) Leung and Camille Sicat
-
 ## Introduction
 Our dataset is focused on recipes. Based on this data, we want to answer the question: What factors determine if a recipe is given a high rating? We want to answer this question so that when we search online recipe sites we can look at small details and determine if a recipe is good to follow. 
 
