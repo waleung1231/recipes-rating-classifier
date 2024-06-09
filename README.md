@@ -89,6 +89,7 @@ For our fairness analysis we chose whether or not the recipe require baking as o
 Our Null and Alternative Hypothesis:
 
 Null Hypothesis: Our model is fair. There is no difference in precision between recipe that require pre-heat and recipe that do not require preheat. And any observed difference is due to random chance. 
+
 Alternative Hypothesis: Our model is not fair.There is a significant difference between the precision between recipe that require pre-heat and recipe that do not require preheat. And any observed difference is not due to chance. 
 
 The test statistic we chose is the different in precision score across recipes that requires pre-heat and those that do not require pre-heat.
