@@ -115,7 +115,14 @@ As stated earlier, we left 'n_steps' and 'n_ingredients' alone as they were nume
 To start the hyperparameter tuning process, we preprocessed the data to encode our given features. To better avoid overfitting given the increased complexity of our model, we decided to use a RandomForestClassifier with a 75%/25% train/test split. Our hyperparameters were 'max_depth' with values \[2,3,7\], 'min_samples_split' with values \[2, 5, 10\], and 'criterion' of \['gini', 'entropy'\]. We used GridSearchCV with five-fold cross-validation to determine that our best paramters were a criterion of 'gini', a 'max_depth' of 7, and a 'min_samples_split' of 10. 
 
 Using these hyperparameters, we created a RandomForestClassifier. On training data the model had a mean accuracy across all 5 categories of ~98.3%. On testing data it had a mean accuracy across all 5 categories of ~98.2%. Based on these dramatic improvement in accuracy across all 5 categories, we can see this RandomForestClassifier's performance is superior to our previous DecisionTreeClassifier. (To illustrate, see the confusion matrix below.)
-[Insert confusion matrix here]
+## Confusion Matrix
+<iframe
+  src="assets/confusion_matrix.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 While we did use a RandomForestClassifier to avoid overfitting, it is posssible that it overfit to the training/test set. However, that cannot be tested without using more data. 
 
