@@ -60,7 +60,7 @@ Meanwhile, we believe that 'rating' or 'average_rating' is MAR. Below is the plo
 For this plot, our p-value was 0.0, meaning the results are statistically significant. This also applies for our permutation test to see if 'average_rating' is MAR conditioned on 'n_ingredients'. 
 ## 'average_rating' conditioned on 'n_ingredients'
 <iframe
-  src="assets/avg_ratings_ingredients_perm_plot.html"
+  src="assets/avg_ratings_ingredients_perm_plot_copy.html"
   width="800"
   height="600"
   frameborder="0"
