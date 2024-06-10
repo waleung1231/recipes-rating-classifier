@@ -15,15 +15,33 @@ In the 'rating' column, we changed all values with rating of 0 to np.NaN. This i
 After this step, we created an 'average_rating' column, where each recipe has an average_rating based on the mean of all ratings given by reviewers. 
 
 For our univariate analysis, we decided to look at the distributin of the 'ratings' column. This is especially relevant because our model is predicting rating so we want to see what the distribution is like before we start training. The plot is heavily skewed left, towards 5-star ratings. 
-[Insert plot here]
+## Distribution of Rating
+<iframe
+  src="assets/ratings_dist_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 For our bivariate analysis we wanted to examine the relationship between number of ingredients ('n_ingredients') and number of steps ('n_steps'). 
-[Insert plot here]
+## Number of Ingredients vs. Number of Steps
+<iframe
+  src="assets/ingredients_steps_scatter.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 As you can see above, there does not appear to be a relationship, as there is a large variation in number of steps in recipes with similar number of ingredients. 
 
 For our aggregation, we wanted to see the distribution of 'calories (#)', 'n_ingredients', and 'n_steps', so we created the pivot table below with the aggregation method 'mean'. 
-[Insert table here]
+## Pivot Table of Recipe Data Means
+<iframe
+  src="assets/recipe_means.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 While mean is not the most illustrative measure of center, in the pivot table on average recipes with higher ratings have slightly more ingredients and slightly lower number of steps. That being said, because the data is relatively similar, it is unlikely that rating is influenced solely by these factors. More exploration is needed. 
 
@@ -31,13 +49,31 @@ While mean is not the most illustrative measure of center, in the pivot table on
 We have 4 columns with relevant proportions of missing data: 'description', 'review', 'rating', and 'average_rating'. Of these 4 columns, we believe that 'description' and 'review' are NMAR because users chose not to submit them because they didn't think they were relevant. 
 
 Meanwhile, we believe that 'rating' or 'average_rating' is MAR. Below is the plot of our permutation test to see if 'average_rating' is MAR conditioned on 'n_steps'.
-[Insert n_steps plot here]
+## 'average_rating' Conditioned on 'n_steps'
+<iframe
+  src="assets/avg_rating_steps_perm.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 For this plot, our p-value was 0.0, meaning the results are statistically significant. This also applies for our permutation test to see if 'average_rating' is MAR conditioned on 'n_ingredients'. 
-[Insert n_ingredients plot here].
+## 'average_rating' conditioned on 'n_ingredients'
+<iframe
+  src="assets/avg_ratings_ingredients_perm_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>.
 
 Finally, we ran a permutation test to see if 'average_rating' was MAR conditioned on another numerical column, 'sodium (PDV)'. In the permutation test below you can see that our results are not statistically significant. 
-[Insert sodium plot here].
+## 'average_rating' conditioned on 'sodium (PDV)'
+<iframe
+  src="assets/precision_difference_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 Since 'average_rating' is MAR conditioned on 'n_steps' and 'n_ingredients', and 'average_rating' is based on 'rating', there is a high chance 'rating' is heavily related to 'n_steps' and 'n_ingredients'. We will use this information in our model. 
 
