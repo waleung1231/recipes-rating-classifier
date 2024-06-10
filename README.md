@@ -106,7 +106,7 @@ For this plot, our p-value was 0.0, meaning the results are statistically signif
 Finally, we ran a permutation test to see if 'average_rating' was MAR conditioned on another numerical column, 'sodium (PDV)'. In the permutation test below you can see that our results are not statistically significant. 
 ### 'average_rating' conditioned on 'sodium (PDV)'
 <iframe
-  src="assets/precision_difference_plot.html"
+  src="assets/avg_rating_sodium_perm.html"
   width="800"
   height="400"
   frameborder="0"
@@ -175,11 +175,11 @@ Alternative Hypothesis: Our model is not fair.There is a significant difference 
 
 The test statistic we chose is the different in precision score across recipes that requires pre-heat and those that do not require pre-heat.
 
-And the significant level we chose for our data is 0.05. And the resulting p-value that we got for our data is 0.07. Thus, this indicated that we fail to reject the null hypothesis, and that our data is fair. In addition, any observed differences could be due to random variation rather than a systematic difference in how well the model performs for individuals with and without preheat. All in all, we can conclude that under the case of precision parity our model performs similarly across the two groups. 
+And the significant level we chose for our data is 0.05. And the resulting p-value that we got for our data is 0.066. Thus, this indicated that we fail to reject the null hypothesis, and that our data is fair. In addition, any observed differences could be due to random variation rather than a systematic difference in how well the model performs for individuals with and without preheat. All in all, we can conclude that under the case of precision parity our model performs similarly across the two groups. 
 
 ### Precision Difference Plot
 <iframe
-  src="assets/precision_difference.html"
+  src="assets/precision_difference_plot.html"
   width="800"
   height="600"
   frameborder="0"
