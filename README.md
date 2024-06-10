@@ -8,7 +8,7 @@ The first dataset we were given was 'recipes', which has 83782 rows and 12 colum
 ## The recipes DataFrame
 <iframe
   src="assets/recipes.html"
-  width="1200"
+  width="1000"
   height="600"
   frameborder="0"
 ></iframe>
@@ -17,7 +17,7 @@ The other dataset we were given was 'interactions', which has 731927 rows and 5 
 ## The interactions DataFrame
 <iframe
   src="assets/interactions"
-  width="1200"
+  width="1000"
   height="600"
   frameborder="0"
 ></iframe>
@@ -34,7 +34,7 @@ After this step, we created an 'average_rating' column, where each recipe has an
 ## The cleaned recipes_and_interactions DataFrame
 <iframe
   src="assets/recipes_and_interactions.html"
-  width="1200"
+  width="1000"
   height="600"
   frameborder="0"
 ></iframe>
