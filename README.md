@@ -97,7 +97,7 @@ And the significant level we chose for our data is 0.05. And the resulting p-val
 
 ## Precision Difference Plot
 <iframe
-  src="assets/precision_difference_plot.html"
+  src="assets/precision_difference.html"
   width="800"
   height="600"
   frameborder="0"
