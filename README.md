@@ -19,7 +19,7 @@ For our univariate analysis, we decided to look at the distributin of the 'ratin
 <iframe
   src="assets/ratings_dist_plot.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -28,7 +28,7 @@ For our bivariate analysis we wanted to examine the relationship between number 
 <iframe
   src="assets/ingredients_steps_scatter.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -38,8 +38,8 @@ For our aggregation, we wanted to see the distribution of 'calories (#)', 'n_ing
 ## Pivot Table of Recipe Data Means
 <iframe
   src="assets/recipe_means.html"
-  width="800"
-  height="600"
+  width="400"
+  height="300"
   frameborder="0"
 ></iframe>
 
@@ -53,7 +53,7 @@ Meanwhile, we believe that 'rating' or 'average_rating' is MAR. Below is the plo
 <iframe
   src="assets/avg_rating_steps_perm.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -62,7 +62,7 @@ For this plot, our p-value was 0.0, meaning the results are statistically signif
 <iframe
   src="assets/avg_rating_ingredients_perm.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>.
 
@@ -71,7 +71,7 @@ Finally, we ran a permutation test to see if 'average_rating' was MAR conditione
 <iframe
   src="assets/precision_difference_plot.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
