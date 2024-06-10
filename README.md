@@ -4,7 +4,7 @@ By Wan-Rong (Emma) Leung and Camille Sicat
 ## Introduction
 Our dataset is focused on recipes. Based on this data, we want to answer the question: What factors determine if a recipe is given a high rating? We want to answer this question so that when we search online recipe sites we can look at small details and determine if a recipe is good to follow. 
 
-The recipes dataset contains 234429 rows and the columns 'name', 'id', 'minutes', 'contributor_id', 'submitted', 'tags', 'nutrition', 'n_steps', 'steps', 'description', 'ingredients', 'n_ingredients', 'user_id', 'date', 'rating', and 'review'. 
+The recipes dataset contains 234429 rows and the columns 'name', 'id', 'minutes', 'contributor_id', 'submitted', 'tags', 'nutrition', 'n_steps', 'steps', 'description', 'ingredients', 'n_ingredients', 'user_id', 'date', 'rating', and 'review'. Of these columns, we are most interested in 'tags', 'n_steps', 'steps', 'n_ingredients', and 'rating'. See the table below for a detailed description of each column. 
 ![Our dataset columns and descriptions](assets/column_explanations.png)
 
 ### Data Cleaning and Exploratory Data Analysis
@@ -13,6 +13,7 @@ We started off with spliting all the values in nuitrition into new seperate colu
 In the 'rating' column, we changed all values with rating of 0 to np.NaN. This is because if a review contained no rating, it was a missing rating, and thus further analysis must be done to determine why it is missing.
 
 After this step, we created an 'average_rating' column, where each recipe has an average_rating based on the mean of all ratings given by reviewers. 
+[Insert cleaned DataFrame here]
 
 For our univariate analysis, we decided to look at the distributin of the 'ratings' column. This is especially relevant because our model is predicting rating so we want to see what the distribution is like before we start training. The plot is heavily skewed left, towards 5-star ratings. 
 ## Distribution of Rating
@@ -127,6 +128,7 @@ Using these hyperparameters, we created a RandomForestClassifier. On training da
 While we did use a RandomForestClassifier to avoid overfitting, it is posssible that it overfit to the training/test set. However, that cannot be tested without using more data. 
 
 ### Fairness Analysis
+
 For our fairness analysis we chose whether or not the recipe require baking as our evaluation metric group. Whether or not a recipe require preheat indicates if this recipe requires baking. The evalutation matrix we chose is the Precision Parity, this is because our data would not be valid for accuracy parity since our predicting column (rating) is an imbalanced dataset, where we have significantly more 5 star ratings. Therefore, using accuracy parity might not lead to fair outcomes. 
 
 Our Null and Alternative Hypothesis:
