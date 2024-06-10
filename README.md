@@ -114,7 +114,7 @@ As stated earlier, we left 'n_steps' and 'n_ingredients' alone as they were nume
 
 To start the hyperparameter tuning process, we preprocessed the data to encode our given features. To better avoid overfitting given the increased complexity of our model, we decided to use a RandomForestClassifier with a 75%/25% train/test split. Our hyperparameters were 'max_depth' with values \[2,3,7\], 'min_samples_split' with values \[2, 5, 10\], and 'criterion' of \['gini', 'entropy'\]. We used GridSearchCV with five-fold cross-validation to determine that our best paramters were a criterion of 'entropy', a 'max_depth' of 7, and a 'min_samples_split' of 2. 
 
-Using these hyperparameters, we created a RandomForestClassifier. On training data the model had a mean accuracy across all 5 categories of ~98.3%. On testing data it had a mean accuracy across all 5 categories of ~98.2%. Based on these dramatic improvement in accuracy across all 5 categories, we can see this RandomForestClassifier's performance is superior to our previous DecisionTreeClassifier. (To illustrate, see the confusion matrix below.)
+Using these hyperparameters, we created a RandomForestClassifier. On training data the model had a mean accuracy across all 5 categories of ~98.1%. On testing data it had a mean accuracy across all 5 categories of ~97.9%. Based on these dramatic improvement in accuracy across all 5 categories, we can see this RandomForestClassifier's performance is superior to our previous DecisionTreeClassifier. (To illustrate, see the confusion matrix below.)
 ## Confusion Matrix
 <iframe
   src="assets/confusion_matrix.html"
@@ -136,7 +136,8 @@ Null Hypothesis: Our model is fair. There is no difference in precision between 
 Alternative Hypothesis: Our model is not fair.There is a significant difference between the precision between recipe that require pre-heat and recipe that do not require preheat. And any observed difference is not due to chance. 
 
 The test statistic we chose is the different in precision score across recipes that requires pre-heat and those that do not require pre-heat.
-And the significant level we chose for our data is 0.05. And the resulting p-value that we got for our data is 0.253. Thus, this indicated that we fail to reject the null hypothesis, and that our data is fair. In addition, any observed differences could be due to random variation rather than a systematic difference in how well the model performs for individuals with and without preheat. All in all, we can conclude that under the case of precision parity our model performs similarly across the two groups. 
+
+And the significant level we chose for our data is 0.05. And the resulting p-value that we got for our data is 0.07. Thus, this indicated that we fail to reject the null hypothesis, and that our data is fair. In addition, any observed differences could be due to random variation rather than a systematic difference in how well the model performs for individuals with and without preheat. All in all, we can conclude that under the case of precision parity our model performs similarly across the two groups. 
 
 ## Precision Difference Plot
 <iframe
