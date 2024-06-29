@@ -1,4 +1,4 @@
-# Recipes Ratings RandomForestClassifier
+# Recipes Ratings DecisionTreeClassifier
 By Wan-Rong (Emma) Leung and Camille Sicat
 
 ## Introduction
